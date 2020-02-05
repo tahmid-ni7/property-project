@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title%}
+TN Real Estate | Admin
+{% endblock %}
+
+{% block branding %}
+<h1 id="head">
+ <img src="{% static 'img/logo.png' %}" height="50" width="60"> Admin area
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+ <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}

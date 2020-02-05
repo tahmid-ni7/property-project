@@ -1,0 +1,27 @@
+#header{
+    background-color: #283E60;
+    color: #ffffff;
+}
+#branding h1{
+    color: #fff;
+}
+a:link,
+a:visited{
+    color: #283E60;
+}
+div.breadcrumbs{
+    background-color: #29AB88;
+}
+.module caption, .inline-group h2 {
+    background-color: #29AB88;
+}
+input[type="submit"], button {
+    background-color: #10284E;
+    color: #fff;
+}
+input[type="submit"], button:hover{
+    background-color: #10284E;
+}
+.module h2, .module caption, .inline-group h2 {
+     background-color: #29AB88;!important;
+}
