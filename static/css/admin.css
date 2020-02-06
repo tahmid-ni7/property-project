@@ -25,3 +25,9 @@ input[type="submit"], button:hover{
 .module h2, .module caption, .inline-group h2 {
      background-color: #29AB88;!important;
 }
+.selector-chosen h2{
+    background-color: #29AB88;!important;
+}
+.module caption, .inline-group h2 {
+    font-size: 14px;
+}
