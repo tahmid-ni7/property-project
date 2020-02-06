@@ -9,4 +9,6 @@ class ListingAdmin(admin.ModelAdmin):
     list_editable = ('is_published',)
     search_fields = ('title', 'address', 'price', 'city', 'zipcode', 'bedrooms')
     list_per_page = 25
+
+
 admin.site.register(Listing, ListingAdmin)
