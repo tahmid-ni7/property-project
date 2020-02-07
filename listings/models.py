@@ -29,3 +29,13 @@ class Listing(models.Model):
 
     def __str__(self):
         return self.title
+
+class AboutText(models.Model):
+    about_title = models.CharField(max_length=200)
+    sub_title = models.CharField(max_length=200, blank=True)
+    about_photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+    about_description = models.TextField()
+    is_published = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.about_title

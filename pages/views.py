@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from listings.models import Listing
+from listings.models import Listing,AboutText
 from realtors.models import Realtor
 from listings.choices import bedroom_choices, price_choices, city_choices
 
@@ -19,9 +19,11 @@ def index(request):
 def about(request):
     realtors = Realtor.objects.order_by('-hire_date')[:3]
     mvp_realtors = Realtor.objects.filter(is_mvp=True)
+    about_area = AboutText.objects.all().filter(is_published=True)
 
     context = {
         'realtors': realtors,
-        'mvp_realtors': mvp_realtors
+        'mvp_realtors': mvp_realtors,
+        'about_area': about_area
     }
     return render(request, 'pages/about.html', context)
