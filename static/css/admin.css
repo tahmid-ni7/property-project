@@ -30,4 +30,5 @@ input[type="submit"], button:hover{
 }
 .module caption, .inline-group h2 {
     font-size: 14px;
+    font-weight: bold;
 }

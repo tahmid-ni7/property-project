@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title_block %}- About {% endblock %}
+
 {% block body_block %}
   <section id="showcase-inner" class="py-5 text-white">
     <div class="container">
       <div class="row text-center">
         <div class="col-md-12">
-          <h1 class="display-4">About BT Real Estate</h1>
+          <h1 class="display-4">About TN Real Estate</h1>
           <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
         </div>
       </div>
@@ -32,14 +34,16 @@
     <div class="container">
       <div class="row">
         {% if about_area %}
-        {% for about in about_area %}
+        
         <div class="col-md-8">
-          <h2>{{about.about_title}}</h2>
-          <p class="lead">{{about.sub_title}}</p>
-          <img src="{{about.about_photo.url}}" alt="">
-          <p class="mt-4">{{about.about_description}}</p>
+          {% for about in about_area %}
+            <h2>{{about.about_title}}</h2>
+            <p class="lead">{{about.sub_title}}</p>
+            <img src="{{about.about_photo.url}}" alt="">
+            <p class="mt-4">{{about.about_description}}</p>
+          {% endfor %}
         </div>
-        {% endfor %}
+        
         {% else %}
         <div class="col-md-8">
           <p class="alert-danger alert">Nothing published in about area</p>
@@ -47,18 +51,18 @@
         {% endif %}
         
         {% if mvp_realtors %}
-        {% for realtor in mvp_realtors %}
-          <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
-            <div class="card-body">
-              <h5 class="card-title">Seller Of The Month</h5>
-              <h6 class="text-secondary">{{ realtor.name }}</h6>
-              <p class="card-text">{{ realtor.description }}</p>
+          <div class="col-md-4 mb-3">
+            {% for realtor in mvp_realtors %}
+            <div class="card">
+              <img class="card-img-top" src="{{ realtor.photo.url }}" alt="Seller of the month">
+              <div class="card-body">
+                <h5 class="card-title">Seller Of The Month</h5>
+                <h6 class="text-secondary">{{ realtor.name }}</h6>
+                <p class="card-text">{{ realtor.description }}</p>
+              </div>
             </div>
-          </div>
+            {% endfor %}
         </div>
-        {% endfor %}
         {% else %}
         <div class="col-md-4">
           <p class="alert alert-warning">No seller of the month set</p>

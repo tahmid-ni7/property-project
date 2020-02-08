@@ -1,5 +1,6 @@
 from django.contrib import admin
-from listings.models import Listing,AboutText
+from listings.models import Listing, AboutText
+
 
 # Register your models here.
 class ListingAdmin(admin.ModelAdmin):
@@ -13,9 +14,11 @@ class ListingAdmin(admin.ModelAdmin):
 
 admin.site.register(Listing, ListingAdmin)
 
+
 class AboutTextAdmin(admin.ModelAdmin):
-    list_display = ('id', 'about_title', 'is_published')
+    list_display = ('id', 'about_title', 'sub_title', 'is_published')
     list_display_links = ('id', 'about_title')
     list_editable = ('is_published',)
+
 
 admin.site.register(AboutText, AboutTextAdmin)

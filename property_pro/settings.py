@@ -139,3 +139,9 @@ STATICFILES_DIRS = [
 # Media Folder settings
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+
+# Messages alert
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
