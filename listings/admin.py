@@ -6,7 +6,7 @@ from listings.models import Listing, AboutText
 class ListingAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'price', 'realtor', 'is_published', 'list_date')
     list_display_links = ('id', 'title')
-    list_filter = ('realtor',)
+    list_filter = ('realtor','city')
     list_editable = ('is_published',)
     search_fields = ('title', 'address', 'price', 'city', 'zipcode', 'bedrooms')
     list_per_page = 25
