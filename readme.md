@@ -6,6 +6,7 @@ Using python 3.8, Django 2.2.5, Bootstrap 4
 - Dynamic about page
 - Multiple search functionality
 - User inquiry / contact
+- Django alert messages    
 - Secured django admin site
 
 ### Database
